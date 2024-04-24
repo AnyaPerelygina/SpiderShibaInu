@@ -1,0 +1,129 @@
+.hero {
+  background-image: url('../../img/hero/background-hero.webp');
+  background-repeat: no-repeat;
+  background-size: 100% 104%;
+
+  min-height: 888px;
+  width: 100%;
+
+  position: absolute;
+  top: 0;
+  padding: 168px 0 128px;
+
+  .container {
+    display: grid;
+    grid-template-columns: auto auto;
+  }
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+    max-width: 720px;
+
+    p:first-child {
+      margin: 0;
+      padding: 0 0 5px;
+      max-width: 699px;
+
+      font-size: 80px;
+      line-height: 90px;
+      font-weight: 800;
+      color: $color-alizarin;
+
+      span {
+        color: $color-default-white;
+      }
+    }
+
+    p {
+      font-size: 32px;
+      font-weight: 400;
+      line-height: 38px;
+      color: $color-mischka;
+
+      margin: 0;
+      padding: 42px 0 44px;
+    }
+  }
+
+  &__notice {
+    font-size: 25px;
+    font-weight: 500;
+    line-height: 30px;
+    color: $color-storm-grey;
+  }
+
+  &__link {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 25px;
+    padding: 0 19px 22px 0;
+
+    a {
+      font-size: 25px;
+      font-weight: 700;
+      line-height: 30px;
+      color: $color-default-white;
+
+      display: inline-flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+
+      border-radius: 10px;
+      width: fit-content;
+      padding: 25px;
+
+      @include hover-focus {
+        background-color: $color-link-white;
+        color: $color-venetial-red;
+        border: none;
+        outline: none;
+      }
+    }
+
+    a:first-child {
+      background-color: $color-alizarin;
+      min-width: 295px;
+    }
+
+    a:last-child {
+      font-size: 22px;
+      font-weight: 500;
+      line-height: 26px;
+      min-width: 379px;
+      background-color: rgba(255, 255, 255, 0.05);;
+    }
+  }
+
+  &__contact {
+    height: fit-content;
+    max-width: 699px;
+
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.09);
+    padding: 10px 30px;
+
+    span:first-child {
+      font-size: 15px;
+      font-weight: 500;
+      line-height: 18px;
+      color: rgba(255, 255, 255, 0.2);
+    }
+
+    span:last-child {
+      font-size: 25px;
+      font-weight: 400;
+      line-height: 30px;
+      color: rgba(255, 255, 255, 0.4);
+    }
+  }
+
+  &__img {
+    margin: 21px auto 0;
+  }
+}

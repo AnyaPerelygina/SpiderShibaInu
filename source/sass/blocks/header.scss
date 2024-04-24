@@ -1,6 +1,9 @@
 .header {
-  background-color: $color-midnight-express;
+  // background-color: $color-midnight-express;
   padding: 25px 0;
+
+  position: relative;
+  z-index: 1;
 
   .container {
     display: grid;
@@ -23,9 +26,10 @@
 
     background-color: $color-venetial-red;
     color: $color-link-white;
+    text-align: center;
     border-radius: 10px;
     border: none;
-    padding: 11px 10px;
+    padding: 8px 10px;
 
     cursor: pointer;
     user-select: none;
