@@ -1,0 +1,39 @@
+.running-line {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  overflow: hidden;
+  background-color: rgba(90, 64, 57, 1);
+
+  white-space: nowrap;
+
+  position: absolute;
+  bottom: 0;
+
+  padding: 11px 0;
+
+  &__text {
+    display: flex;
+    white-space: nowrap;
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 16px;
+    color: rgba(255, 245, 0, 0.6);
+    padding-left: 15px;
+    text-transform: uppercase;
+    animation-name: running-line;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+  }
+}
+
+@keyframes running-line {
+  0% {
+    transform: translateZ(0) translateX(0);
+  }
+
+  100% {
+    transform: translateZ(0) translateX(-100%);
+  }
+}
