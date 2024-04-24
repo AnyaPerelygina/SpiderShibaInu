@@ -1,36 +1,55 @@
-mixin header(headerMods, currentUrl)
+mixin header(headerMods)
   -
-    const headerLinks = [
+    const headerLink = [
       {
-        href: "index.html",
-        text: "Главная"
+        href: "#",
+        text: "How it works"
       },
       {
         href: "#",
-        text: "Страница 2"
+        text: "Play and earn"
       },
       {
         href: "#",
-        text: "Страница 3"
+        text: "Roadmap"
       },
+      {
+        href: "#",
+        text: "Team"
+      },
+      {
+        href: "#",
+        text: "Partners&Investors"
+      },
+      {
+        href: "#",
+        text: "Why invest in SpiderShiba"
+      },
+      {
+        href: "#",
+        text: "Tokenomics"
+      },
+      {
+        href: "#",
+        text: "FAQ"
+      },
+      {
+        href: "#",
+        text: "Community"
+      }
     ]
 
   header.header(class=headerMods)
     .container
-      if(currentUrl === "index.html")
-        //- lighthouse снимает 10 баллов SEO за <a> без href
-        span.header__logo Логотип
-      else
-        a.header__logo(href="index.html", aria-label="Переход на главную") Логотип
-      nav.main-nav
-        button.main-nav__toggle.btn-reset(type="button", aria-label="Переключатель отображения меню", aria-pressed="false")
-          +icon("icon-burger", 20, 20)
-        .main-nav__wrapper
-          ul.main-nav__list
-            each link in headerLinks
-              - const activeState = currentUrl === link.href
-              li.main-nav__item
-                if(activeState)
-                  span.main-nav__link.is-active= link.text
-                else
-                  a.main-nav__link(href=link.href)= link.text
+      a.header__logo(href="index.html", aria-label="Go to home page.")
+        +img("logotype", "logo", "webp", 253, 50, "Logotype Spidershiba Inu.")
+      nav.header__nav.nav
+        button.nav__toggle.toggle(type="button", aria-label="Open menu.", aria-pressed="false")
+          +icon("burger-open", 17, 12).toggle__opened
+          +icon("burger-close", 13, 12).toggle__closed
+        .nav__wrapper
+          ul.nav__list
+            each link in headerLink
+              li.nav__item
+                a.nav__link(href=link.href)= link.text
+      button.header__link(type="button", aria-label="Join our community.") Join Community

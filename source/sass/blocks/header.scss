@@ -1,13 +1,40 @@
 .header {
-  padding: 28px 0;
-
-  background-color: $color-neon-blue;
+  background-color: $color-midnight-express;
+  padding: 25px 0;
 
   .container {
-    display: flex;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 30px;
+    justify-content: space-between;
+    align-items: center;
   }
 
   &__logo {
-    color: $color-default-white;
+    @include hover-focus {
+      opacity: 0.8;
+      border: none;
+      outline: none;
+    }
+  }
+
+  &__link {
+    width: 170px;
+
+    background-color: $color-venetial-red;
+    color: $color-link-white;
+    border-radius: 10px;
+    border: none;
+    padding: 11px 10px;
+
+    cursor: pointer;
+    user-select: none;
+
+    @include hover-focus {
+      background-color: $color-link-white;
+      color: $color-venetial-red;
+      border: none;
+      outline: none;
+    }
   }
 }
