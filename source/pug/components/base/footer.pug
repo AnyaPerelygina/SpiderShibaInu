@@ -1,3 +1,24 @@
 mixin footer(footerMods)
   footer.footer(class=footerMods)
     .container
+      h2.footer__title Join our SpiderShib Inu Community
+      .footer__social
+        a.footer__link(href="#", aria-label="Go to Telegram.")
+          +icon("telegram", 58, 48)
+        a.footer__link(href="#", aria-label="Go to Twitter.")
+          +icon("twitter", 48, 48)
+        a.footer__link(href="#", aria-label="Go to Reddit.")
+          +icon("reddit", 48, 48)
+        a.footer__link(href="#", aria-label="Go to Facebook.")
+          +icon("facebook", 48, 48)
+        a.footer__link(href="#", aria-label="Go to Medium.")
+          +icon("medium", 48, 48)
+        a.footer__link(href="#", aria-label="Go to Instagram.")
+          +icon("instagram", 48, 48)
+      .footer__img
+        +img("shiba", "spidershiba", "webp", 256, 238, "Image Spider Shiba Inu.")
+      .footer__contact
+        span SpiderShiba Inu’s Contract address:
+        span 0xe4C6E7a0F696Fb2356A187020eb13E742792Fdcc
+    .footer__copyright
+      span Copyright © 2021 SpiderShiba Inu. All Rights Reserved.
