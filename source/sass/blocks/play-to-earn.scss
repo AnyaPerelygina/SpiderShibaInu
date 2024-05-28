@@ -1,0 +1,120 @@
+.play-to-earn {
+  margin: 880px 0 0;
+
+  .container {
+    display: grid;
+    grid-template-columns: auto auto;
+    padding-bottom: 175px;
+    column-gap: 32px;
+  }
+
+  .title {
+    grid-column: span 2;
+    margin: 0 0 10px;
+  }
+
+  p {
+    grid-column: span 2;
+
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 42px;
+    text-align: center;
+    color: $color-default-white;
+    opacity: 0.5;
+    margin: 0 0 50px;
+  }
+
+  &__text {
+    grid-area: span 2;
+
+    display: flex;
+    flex-direction: column;
+
+    p {
+      font-size: 24px;
+      font-weight: 400;
+      line-height: 29px;
+      letter-spacing: -1.2px;
+      text-align: start;
+      color: $color-default-white;
+      opacity: 0.6;
+      margin: 0 0 28px;
+    }
+  }
+
+  &__subtitle {
+    font-size: 27px;
+    font-weight: 700;
+    line-height: 36px;
+    text-align: start;
+    color: $color-default-white;
+    margin: 0 0 21px;
+  }
+}
+
+.play-to-earn__card {
+  border-radius: 30px;
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  column-gap: 31px;
+}
+
+.play-to-earn__card--1 {
+  grid-column: span 2;
+  background-color: $color-black-russian-2;
+
+  padding: 36px 52px;
+  margin: 0 0 46px;
+
+  column-gap: 38px;
+
+  p {
+    max-width: 946px;
+  }
+}
+
+.play-to-earn__card--2 {
+  grid-column: span 1;
+  background-color: $color-neon-carrot;
+
+  max-width: 847px;
+  padding: 36px 30px 12px;
+
+  img {
+    width: 153px;
+    height: 160px;
+  }
+
+  p {
+    font-size: 28px;
+    font-weight: 400;
+    line-height: 33px;
+    text-align: start;
+    letter-spacing: -2px;
+  }
+}
+
+.play-to-earn__card--3 {
+  grid-column: span 1;
+  background-color: $color-navy-blue;
+
+  max-width: 848px;
+  padding: 36px 30px 12px;
+
+  img {
+    width: 180px;
+    height: 160px;
+  }
+
+  p {
+    font-size: 28px;
+    font-weight: 400;
+    line-height: 33px;
+    text-align: start;
+    letter-spacing: -2px;
+  }
+}

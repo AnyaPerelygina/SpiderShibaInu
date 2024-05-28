@@ -1,13 +1,12 @@
 .footer {
   background-color: $color-sapphire;
-  padding: 900px 0 0; // временное свойство
 
   .container {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 50px;
-    padding: 0 92px 106px;
+    padding: 62px 92px 106px;
 
     position: relative;
 
