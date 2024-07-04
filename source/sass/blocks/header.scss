@@ -14,6 +14,9 @@
   }
 
   &__logo {
+    opacity: 1;
+    transition: opacity $trans-default;
+
     @include hover-focus {
       opacity: 0.8;
       border: none;
@@ -33,6 +36,7 @@
 
     cursor: pointer;
     user-select: none;
+    transition: background-color $trans-default, color $trans-default;
 
     @include hover-focus {
       background-color: $color-link-white;
