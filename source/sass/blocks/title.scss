@@ -5,4 +5,9 @@
   letter-spacing: -2.7px;
   text-align: center;
   color: $color-default-white;
+
+  @include vp-1023 {
+    font-size: 40px;
+    line-height: 48px;
+  }
 }

@@ -1,8 +1,8 @@
 .header {
   padding: 25px 0;
-
-  position: relative;
-  z-index: 1;
+  position: absolute;
+  top: 0;
+  width: 100%;
 
   @include vp-1023 {
     padding: 17px 0;
