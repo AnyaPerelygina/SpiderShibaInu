@@ -37,6 +37,7 @@ body {
 a {
   color: $color-default-black;
   text-decoration: none;
+  user-select: none;
 }
 
 img,
@@ -44,6 +45,7 @@ video {
   display: block;
   max-width: 100%;
   height: auto;
+  object-fit: cover;
 }
 
 textarea {

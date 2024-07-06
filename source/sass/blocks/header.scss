@@ -1,9 +1,12 @@
 .header {
-  // background-color: $color-midnight-express;
   padding: 25px 0;
 
   position: relative;
   z-index: 1;
+
+  @include vp-1023 {
+    padding: 17px 0;
+  }
 
   .container {
     display: grid;
@@ -21,6 +24,20 @@
       opacity: 0.8;
       border: none;
       outline: none;
+    }
+
+    &--desktop {
+      @include vp-1023 {
+        display: none;
+      }
+    }
+
+    &--mobile {
+      display: none;
+
+      @include vp-1023 {
+        display: block;
+      }
     }
   }
 
@@ -43,6 +60,10 @@
       color: $color-venetial-red;
       border: none;
       outline: none;
+    }
+
+    @include vp-1023 {
+      display: none;
     }
   }
 }

@@ -12,6 +12,10 @@
 
   padding: 11px 0;
 
+  @include vp-1023 {
+    padding: 7px 0;
+  }
+
   &__text {
     display: flex;
     white-space: nowrap;

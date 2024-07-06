@@ -34,7 +34,7 @@ const initAnimationPlayToEarn = () => {
   gsap.from(playToEarnCard, {
     scrollTrigger: {
       trigger: playToEarnCard,
-      start: 'top center',
+      start: 'top 80%',
     },
     scale: 0,
     opacity: 0,
@@ -44,7 +44,7 @@ const initAnimationPlayToEarn = () => {
   gsap.from(playToEarnImg, {
     scrollTrigger: {
       trigger: playToEarnCard,
-      start: 'top center',
+      start: 'top 80%',
     },
     scale: 0,
     opacity: 0,
@@ -54,7 +54,7 @@ const initAnimationPlayToEarn = () => {
   gsap.from(playToEarnSubtitle, {
     scrollTrigger: {
       trigger: playToEarnCard,
-      start: 'top center',
+      start: 'top 80%',
     },
     y: 20,
     opacity: 0,
@@ -64,7 +64,7 @@ const initAnimationPlayToEarn = () => {
   gsap.from(playToEarnText, {
     scrollTrigger: {
       trigger: playToEarnCard,
-      start: 'top center',
+      start: 'top 80%',
     },
     y: 20,
     opacity: 0,

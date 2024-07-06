@@ -10,6 +10,19 @@
 
 .nav__toggle {
   display: none;
+
+  @include vp-1023 {
+    display: block;
+    background-color: transparent;
+    border: none;
+    padding: 0;
+  }
+}
+
+.nav__wrapper {
+  @include vp-1023 {
+    display: none;
+  }
 }
 
 .nav__list {

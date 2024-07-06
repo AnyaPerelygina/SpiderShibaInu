@@ -41,8 +41,10 @@ mixin header(headerMods)
 
   header.header(class=headerMods)
     .container
-      a.header__logo(href="index.html", aria-label="Go to home page.")
+      a.header__logo.header__logo--desktop(href="index.html", aria-label="Go to home page.")
         +img("logotype", "logo", "webp", 253, 50, "Logotype Spidershiba Inu.")
+      a.header__logo.header__logo--mobile(href="index.html", aria-label="Go to home page.")
+        +img("logotype", "logo-mobile", "webp", 155, 25, "Logotype Spidershiba Inu.")
       nav.header__nav.nav
         button.nav__toggle.toggle(type="button", aria-label="Open menu.", aria-pressed="false")
           +icon("burger-open", 17, 12).toggle__opened
