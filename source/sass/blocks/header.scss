@@ -8,12 +8,25 @@
     padding: 17px 0;
   }
 
+  @include vp-767 {
+    padding: 9px 0;
+  }
+
+  &.is-opened {
+    background-color: $color-astronaut;
+  }
+
   .container {
     display: grid;
     grid-template-columns: auto auto auto;
     gap: 30px;
     justify-content: space-between;
     align-items: center;
+    position: relative;
+
+    @include vp-1023 {
+      grid-template-columns: auto auto;
+    }
   }
 
   &__logo {
@@ -26,8 +39,12 @@
       outline: none;
     }
 
+    @include vp-1023 {
+      z-index: 5;
+    }
+
     &--desktop {
-      @include vp-1023 {
+      @include vp-767 {
         display: none;
       }
     }
@@ -35,13 +52,14 @@
     &--mobile {
       display: none;
 
-      @include vp-1023 {
+      @include vp-767 {
         display: block;
       }
     }
   }
 
   &__link {
+    display: inline-block;
     width: 170px;
 
     background-color: $color-venetial-red;
@@ -63,7 +81,11 @@
     }
 
     @include vp-1023 {
-      display: none;
+      width: 100%;
+      font-size: 15px;
+      font-weight: 600;
+      line-height: 18px;
+      padding: 16px;
     }
   }
 }

@@ -1,8 +1,10 @@
+import './utils/scroll-lock';
 import {mobileVhFix} from './utils/mobile-vh-fix.js';
 import {initModals} from './modules/modals/init-modals';
 import {Form} from './modules/form-validate/form';
 import {CustomSelect} from './modules/select/custom-select';
 import {uploadFile, uploadImageDrop} from './modules/input-file/init-upload';
+import {addToggleMenu} from './modules/header/header-menu';
 import {initAnimationHero} from './modules/hero/hero-animation';
 import {initAnimationFooter} from './modules/footer/footer';
 import {initAnimationPlayToEarn} from './modules/play-to-earn/play-to-earn';
@@ -18,6 +20,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
   // Modules
   // ---------------------------------
+  addToggleMenu();
 
   // все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'
   // в load следует добавить скрипты, не участвующие в работе первого экрана
