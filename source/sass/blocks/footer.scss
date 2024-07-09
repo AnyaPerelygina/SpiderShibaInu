@@ -1,5 +1,6 @@
 .footer {
   background-color: $color-sapphire;
+  overflow: hidden;
 
   .container {
     display: flex;
@@ -15,6 +16,7 @@
       content: "";
       top: 160px;
       background-image: url('../img/footer/map.webp');
+      background-position: center 40px;
       background-repeat: no-repeat;
       width: 1144px;
       height: 720px;
@@ -24,6 +26,11 @@
 
     @include vp-1023 {
       padding: 67px 14px;
+
+      &::after {
+        top: 0;
+        background-position: -87px 100px;
+      }
     }
   }
 
@@ -58,6 +65,10 @@
       gap: 30px;
       justify-content: center;
     }
+  }
+
+  &__img {
+    z-index: 1;
   }
 
   &__link {
