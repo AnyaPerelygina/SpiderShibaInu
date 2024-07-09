@@ -3,28 +3,38 @@ const addToggleMenu = () => {
   const LINK_CLASS = '.nav__link';
   const BUTTON_CLASS = '.header__link';
   const root = document.querySelector('.header');
+  const container = root.querySelector('.header__container');
   const toggle = root.querySelector('.toggle');
   const nav = root.querySelector('.nav__wrapper');
   const headerLink = root.querySelector(BUTTON_CLASS);
 
-  const moveHeaderLink = (matches) => {
-    if (matches) {
+  const moveHeaderLink = () => {
+    if (window.innerWidth < 1024 && !nav.contains(headerLink)) {
       nav.appendChild(headerLink);
+    } else if (window.innerWidth > 1023 && nav.contains(headerLink)) {
+      container.appendChild(headerLink);
+      closeMenu();
     }
-
-    return;
   };
 
   const onDocumentKeydown = (evt) => {
-    return evt.key === 'Escape' ? closeMenu() : null;
+    if (evt.key === 'Escape') {
+      closeMenu();
+    }
   };
 
   const onLinkClick = (evt) => {
-    return evt.target.matches(LINK_CLASS) || evt.target.matches(BUTTON_CLASS) ? closeMenu() : null;
+    if (evt.target.matches(LINK_CLASS) || evt.target.matches(BUTTON_CLASS)) {
+      closeMenu();
+    }
   };
 
   const isMenu = (evt) => {
-    return (evt.target.closest('.header') && evt.target.closest('.toggle') || evt.target.closest('.nav__wrapper')) ? evt.preventDefault() : closeMenu();
+    if ((evt.target.closest('.header') && evt.target.closest('.toggle')) || evt.target.closest('.nav__wrapper')) {
+      evt.preventDefault();
+    } else {
+      closeMenu();
+    }
   };
 
   const openMenu = () => {
@@ -59,12 +69,16 @@ const addToggleMenu = () => {
   };
 
   toggle.addEventListener('click', () => {
-    return !toggle.classList.contains(OPENED_CLASS) ? openMenu() : closeMenu();
+    if (!toggle.classList.contains(OPENED_CLASS)) {
+      openMenu();
+    } else {
+      closeMenu();
+    }
   });
 
-  const mediaQuery = window.matchMedia('(max-width: 1023px)');
-  mediaQuery.addEventListener('change', (e) => moveHeaderLink(e.matches));
-  moveHeaderLink(mediaQuery.matches);
+  window.addEventListener('resize', moveHeaderLink);
+
+  moveHeaderLink();
 };
 
 export {addToggleMenu};

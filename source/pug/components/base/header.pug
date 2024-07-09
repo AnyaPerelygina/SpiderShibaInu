@@ -40,7 +40,7 @@ mixin header(headerMods)
     ]
 
   header.header(class=headerMods)
-    .container
+    .container.header__container
       a.header__logo.header__logo--desktop(href="index.html", aria-label="Go to home page.")
         +img("logotype", "logo", "webp", 253, 50, "Logotype Spidershiba Inu.")
       a.header__logo.header__logo--mobile(href="index.html", aria-label="Go to home page.")
