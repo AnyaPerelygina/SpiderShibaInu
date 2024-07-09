@@ -10,9 +10,9 @@ const addToggleMenu = () => {
   const moveHeaderLink = (matches) => {
     if (matches) {
       nav.appendChild(headerLink);
-    } else {
-      root.appendChild(headerLink);
     }
+
+    return;
   };
 
   const onDocumentKeydown = (evt) => {

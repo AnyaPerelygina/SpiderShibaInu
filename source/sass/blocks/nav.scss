@@ -20,7 +20,7 @@
     transition: all $trans-default;
 
     width: 100%;
-    padding: 43px 32px 43px;
+    padding: 43px 32px 101px;
     margin: 58px 0 0;
     border-radius: 5px;
     background-color: $color-astronaut;
@@ -39,8 +39,8 @@
     visibility: visible;
     opacity: 1;
     overflow-y: auto;
-    height: 102vh;
-    max-height: 710px;
+    height: 100vh;
+    max-height: 767px;
     pointer-events: auto;
   }
 }
